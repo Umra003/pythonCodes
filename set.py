@@ -55,3 +55,10 @@ print("Is s7 a subset of s1? ",s7.issubset(s1)) #it will return False because no
 #11. issuperset(): it is a method that returns True if all the elements of the specified set are present in the set, otherwise it returns False.
  #it will return False because not all the elements of s7 are present in s1
 print("Is s1 a superset of s7? ",s1.issuperset(s7)) #it will return False because not all the elements of s7 are present in s1
+
+#12. isdisjoint(): it is a method that returns True if the set has no elements in common with the specified set, otherwise it returns False.
+s8={12,13,14}   
+print("Is s8 disjoint from s1? ",s8.isdisjoint(s1)) #it will return True because s8 and s1 have no elements in common
+
+#13. len(): it is a method that returns the number of elements in the set.
+print("Length of the set is: ",len(s1)) #it will return the number of elements in the set s1    
