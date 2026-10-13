@@ -7,7 +7,7 @@ dict1={
 print("Original dictionary is: ",dict1)
 
 #dictionary is a collection of key-value pairs
-#It is mutable, unordered and indexed
+#It is mutable, unordered and indexed(keys are unique and immutable but values can be duplicated and mutable)
 #they are accessed by key values
 
 #dictionary methods
