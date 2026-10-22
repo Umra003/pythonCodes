@@ -14,7 +14,7 @@ print(game.upper())
 print(game.lower())
 print(game.count('a'))
 print(len(game))
-print(game.split('-')) # converts it into list
+print(game.split()) # converts it into list
 print(game.strip()) #removes spaces
 print(game.find('love'))
 print(game.replace('love','like'))

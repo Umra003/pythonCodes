@@ -74,3 +74,15 @@ print("Sliced list l6 (first 6 elements):",l6)
 
 l7=l1[:8]
 print("Sliced list l7 (elements upto to 7):",l7)
+
+l8=['apple','banana','chickoo','papaya','strawberry']
+l8[3:4]="pineapple"#this will be added at index 3rd index as 'p','i,'n','e','a','p','p','l','e'
+l8[1:2]=["pineapple"]#this will be added at index 1 index as pineapple was it was sent as an array.
+#l8[1:2]=[] #this will delete the added value
+print(l8)
+
+#list comprehension:
+list1=[i ** 2 for i in range(1,6)]#operation to be done sholud be written at start in list
+list2=[i % 2==0 for i in range(2,8)]
+print(list1)
+print(list2)
