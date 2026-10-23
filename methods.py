@@ -77,3 +77,43 @@ def print_key_value_pairs(**kwargs):#used when number of keyword arguments is un
         print(f"{key}: {value}")
 
 print_key_value_pairs(name="Mubbo", age=25, city="New York") #returns in the form of dictionary.
+
+# A generator is a special type of iterator that produces
+#  values one at a time instead of storing all the values in memory at once.
+def demo():
+    print("Start")
+    yield 10
+
+    print("Middle")
+    yield 20
+
+    print("End")
+    yield 30
+
+g = demo() #The generator object is created. The function body has not executed yet
+# The next() function retrieves the next value from an iterator or generator.
+print(next(g)) #Prints Start, produces 10, and pauses at the first yield.
+print(next(g))  #Resumes after the first yield, prints Middle, produces 20, and pauses again.
+print(next(g)) #Resumes, prints End, produces 30, and pauses at the last yield.
+
+def normal():
+    return 1
+    return 2  # Never reached
+
+def generated():
+    yield 1
+    yield 2
+
+
+#difference between using yeild and return:
+def squares(n):
+    for i in range(1, n + 1):
+        yield i * i  #Produces 1 → pauses → resumes → produces 4 → pauses → continues until all five squares are produced.
+for square in squares(5):
+    print(square)
+
+def squares(n):
+    for i in range(1, n + 1):
+        return i * i #Calculates 1 → returns 1 → function ends.
+
+print(squares(5)) #will just print 1
