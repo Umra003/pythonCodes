@@ -45,3 +45,88 @@ print("Last inserted key-value pair is: ",dict1.popitem()) #it will remove the l
 
 #10. clear(): it is a method that removes all the key-value pairs from the dictionary.
 # dict1.clear()
+
+# nested dictionaries:
+d1={
+    "info1":{  #d1 is main dict while info1 and info2 are nested dict in d1 each nested dict need a unique key
+        'stud1':'umra',  #info1 and info2 are unique keys for nested dictionaries
+        'age':22,
+        'place':'sangli'
+    },
+    'info2':{
+        'stud2':'mubina',
+        'age':23,
+        'place':'pune'
+    }
+}
+print(d1) #prints all the key values in d1
+for key,value in d1.items():   #this will print key value pairs of info1 and info separetly
+    print(key, value)
+for key in d1.keys():#prints info1 and info2
+    print(key)
+for value in d1.values():#prints values in info1 and info2
+    print(value)
+# for i in d1.pop('info1'): #this will return info1 n pop it from dictionary
+#     print(i)
+# for i in d1.popitem(): #this will return last dict i.e info2 n pop it from dictionary
+#     print(i)
+del d1['info1']
+print(d1)#it will print info2 and info1 will be deleted from memory.
+
+# d2={}
+# d2.append({
+#     'name':'bushra',
+#     'age':23,
+#     'place':'mumbai'
+# }
+# )
+# print(d2) #causes error becoz dict dont have append method it have update method to add values
+
+
+d2={} #creating empty dict and adding key values using the update method
+d2.update({
+    'name':'bushra',
+    'age':23,
+    'place':'mumbai'
+}
+)
+print(d2)
+
+
+d3=[] #here we created an empty list and inserted a dict key value pairs using append method.
+d3.append({
+    'name':'tapsira',
+    'age':20,
+    'place':'oman'
+}
+)
+print(d3)
+
+
+# Create an empty dictionary and perform the following tasks:
+dict1={}
+# 1. Add a student's name, age, city, and marks.
+dict1.update({
+    'name':"abc",
+    'age':22,
+    'city':'pune',
+    'marks':90
+})
+# 2. Display the complete information.
+print(dict1)
+# 3. Display only the student's name and marks.
+print(dict1['name'],dict1['marks'])
+# 4. Change the student's marks to 92.
+dict1['marks']=92
+print(dict1)
+# 5. Add the student's email address.
+dict1['email']="abc@gmail.com"
+print(dict1)
+# 6. Remove the city information.
+# dict1.remove['city'] it doent have remove method.
+dict1.pop('city')
+print(dict1)
+# 7. Check whether the age information exists.
+print('age' in dict1)
+# 8. Display all remaining information.
+print(dict1)
