@@ -10,3 +10,11 @@
 # This is called asynchronous programming.
 # 3. Important keywords in Asyncio
 # There are three important things you should understand.
+#1. async: This keyword is used to define a function as asynchronous.This defines a coroutine function.
+#2. await: This keyword is used to pause the execution of a function
+# until the result of an asynchronous operation is ready.asyncio.sleep(2) waits for two seconds without blocking the entire event loop.
+#3. event loop: This is the core of every asyncio application. 
+# It runs asynchronous tasks and callbacks, performs network IO operations, and runs subprocesses.
+# It is responsible for managing and scheduling all the asynchronous tasks in your program.
+# asyncio.run()
+# It is used to execute an asynchronous main function.
