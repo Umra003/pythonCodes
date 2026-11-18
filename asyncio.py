@@ -35,3 +35,37 @@ async def main():
     await asyncio.gather(task1(), task2())
 
 asyncio.run(main())   #await main() is used in jupyter notebook instead of asyncio.run(main())
+
+# asyncio.gather() is a function in Python's asyncio library that allows you to run multiple 
+# asynchronous tasks concurrently and collect their results together.
+# Without gather():
+# async def main():
+#     await task1()
+#     await task2()
+#with gather():
+# async def main():
+    # await asyncio.gather(task1(), task2())
+
+
+#using create_task() to run multiple tasks concurrently:
+import asyncio
+
+async def task1():
+    print("Downloading file...")
+    await asyncio.sleep(3)
+    print("File downloaded!")
+
+async def task2():
+    print("Fetching API...")
+    await asyncio.sleep(2)
+    print("API data fetched!")
+
+async def main():
+
+    t1 = asyncio.create_task(task1())
+    t2 = asyncio.create_task(task2())
+
+    await t1
+    await t2
+
+asyncio.run(main())
