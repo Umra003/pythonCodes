@@ -9,11 +9,26 @@ def decorator(func):
         print("After execution")
 
     return wrapper
+@decorator    #shortcut for greet = decorator(greet)
+def greet():
+    print("Hello Umra!")
+greet()
+
+
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Before execution")
+
+        func(*args, **kwargs)
+
+        print("After execution")
+
+    return wrapper
 
 
 @decorator
-def greet():
-    print("Hello Umra!")
+def greet(name):
+    print("Hello", name)
 
 
-greet()
+greet("Umra")
