@@ -18,3 +18,20 @@
 # It is responsible for managing and scheduling all the asynchronous tasks in your program.
 # asyncio.run()
 # It is used to execute an asynchronous main function.
+
+# import asyncio
+
+# async def task1():
+#     print("Task 1 started")
+#     await asyncio.sleep(3)
+#     print("Task 1 completed")
+
+# async def task2():
+#     print("Task 2 started")
+#     await asyncio.sleep(2)
+#     print("Task 2 completed")
+
+# async def main():
+#     await asyncio.gather(task1(), task2())
+
+# asyncio.run(main())
