@@ -19,19 +19,19 @@
 # asyncio.run()
 # It is used to execute an asynchronous main function.
 
-# import asyncio
+import asyncio
 
-# async def task1():
-#     print("Task 1 started")
-#     await asyncio.sleep(3)
-#     print("Task 1 completed")
+async def task1():
+    print("Task 1 started")
+    await asyncio.sleep(3)
+    print("Task 1 completed")
 
-# async def task2():
-#     print("Task 2 started")
-#     await asyncio.sleep(2)
-#     print("Task 2 completed")
+async def task2():
+    print("Task 2 started")
+    await asyncio.sleep(2)
+    print("Task 2 completed")
 
-# async def main():
-#     await asyncio.gather(task1(), task2())
+async def main():
+    await asyncio.gather(task1(), task2())
 
-# asyncio.run(main())
+asyncio.run(main())
