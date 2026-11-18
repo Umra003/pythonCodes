@@ -8,8 +8,6 @@
 # This folder is called a package.
 # __init__.py is a special file that we can put inside this folder to 
 # initialize the package and control what happens when it is imported.
-
-
 import calculator
 
 from calculator.add import addition
