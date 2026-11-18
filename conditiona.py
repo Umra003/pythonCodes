@@ -38,7 +38,8 @@ result = "positive" if num > 0 else "not positive" #shorthand for if-else statem
 print("Using conditional expression")
 print("The number is", result)
 
-#using match-case statement(switch case statement), used when there are multiple conditions to check of fixed values
+#using match-case statement(switch case statement), 
+# used when there are multiple conditions to check of fixed values
 num=int(input("Enter a number: "))
 match num:#macth is keyword and num is the variable to be checked
     case 0:
