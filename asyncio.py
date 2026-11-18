@@ -34,4 +34,4 @@ async def task2():
 async def main():
     await asyncio.gather(task1(), task2())
 
-asyncio.run(main())
+asyncio.run(main())   #await main() is used in jupyter notebook instead of asyncio.run(main())
