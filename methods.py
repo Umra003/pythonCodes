@@ -1,8 +1,9 @@
 #reusable block of code that performs a particular task.
 # def is a Python keyword used to define a function.
-def my_function():#Defining: Creating the function using def.
-    #parameters: Variables that can be passed to the function to customize its behavior. In this case, there are no parameters.
-    # The code inside this function will be executed when the function is called.
+#Defining: Creating the function using def.
+#parameters: Variables that can be passed to the function to customize its behavior. In this case, there are no parameters.
+# The code inside this function will be executed when the function is called.
+def my_function():
     print("Hello from my_function!")
 
 # Call the function: Executing the function by writing its name followed by parentheses ().

@@ -1,3 +1,3 @@
-#subtract function:
+#subtraction function:
 def subtraction(a, b):
     return a - b
