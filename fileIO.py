@@ -32,7 +32,8 @@ with open("myfile.txt", "r") as file:
     print(file.readline())#prints 2nd line
 
 with open("myfile.txt") as f:
-    print(f.readlines()) #in the form of list
+    print(f.readlines()) #in the form of list but \n is added everytime at the end
+    print(f.read().splitlines()) #to avoid \n in the end use splitlines() along with read.
 
 #printing a particular line (use readlines()):
 with open("myfile.txt") as f:
