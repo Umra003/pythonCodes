@@ -13,8 +13,16 @@
 # ImportError	Import cannot be completed	Missing imported name
 # Python provides five important keywords:
 # - try :contains statements that might generate an exception during execution.
+# (a try block needs an except or finally block to form a complete exception-handling structure)
 # - except :handles the exception if it occurs.
 # - else :executed if no exception occurs.
 # - finally :executed regardless of whether an exception occurs or not.
 # - raise :used to throw a custom exception.
+
+try:
+    num = int(input("Enter a number: "))
+    print(num)
+
+except ValueError:
+    print("Invalid input! Please enter numbers only.")
 
