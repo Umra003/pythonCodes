@@ -11,3 +11,9 @@
 # NameError	Variable not defined	print(x)
 # FileNotFoundError	File does not exist	Opening a missing file
 # ImportError	Import cannot be completed	Missing imported name
+# Python provides five important keywords:
+# - try
+# - except
+# - else
+# - finally
+# - raise
