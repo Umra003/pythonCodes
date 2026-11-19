@@ -81,3 +81,35 @@ finally:
     print("Calculator execution completed!")
 
 
+#nested try-except blocks:
+#Nested try blocks mean writing one try-except block inside another try block.
+class AgeError(Exception):
+    pass
+
+
+try:
+    print("Student Registration")
+
+    name = input("Enter your name: ")
+
+    try:
+        age = int(input("Enter your age: "))
+
+        if age < 18:
+            raise AgeError("Student must be 18 or above!")
+
+        print("\nRegistration Successful!")
+        print("Name:", name)
+        print("Age:", age)
+
+    except ValueError as e:
+        print("Invalid age! Please enter numbers only.")
+
+    except AgeError as e:
+        print("Registration Error:", e)
+
+except Exception as e:
+    print("Something went wrong:", e)
+
+finally:
+    print("\nRegistration process completed!")
