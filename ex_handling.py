@@ -85,8 +85,6 @@ finally:
 #Nested try blocks mean writing one try-except block inside another try block.
 class AgeError(Exception):
     pass
-
-
 try:
     print("Student Registration")
 
