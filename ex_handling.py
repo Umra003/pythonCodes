@@ -38,3 +38,15 @@ else:
     print("You entered:", num)
     print("Conversion successful!")
 
+#raise exception is used to throw a custom exception. It allows you to create your own error messages and handle specific situations in your code.
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero!")
+    return a / b
+age = int(input("Enter your age: "))
+#or
+if age < 18:
+    raise ValueError("You must be 18 or older!")
+
+print("You are eligible!")
+
