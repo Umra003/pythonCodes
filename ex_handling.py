@@ -60,3 +60,22 @@ print("You are eligible!")
 #multiple exception handling is used to handle different types of exceptions that may occur in a try block.
 #  It allows you to specify multiple except blocks, each targeting a specific exception type, enabling more precise error
 #  handling and providing appropriate responses based on the nature of the exception encountered.
+try:
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    result = a / b
+
+    print("Result:", result)
+
+except ValueError as e:
+    print("Invalid input:", e)
+
+except ZeroDivisionError as e:
+    print("Math error:", e)
+
+except TypeError as e:
+    print("Type error:", e)
+
+finally:
+    print("Calculator execution completed!")
