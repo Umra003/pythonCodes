@@ -12,8 +12,9 @@
 # FileNotFoundError	File does not exist	Opening a missing file
 # ImportError	Import cannot be completed	Missing imported name
 # Python provides five important keywords:
-# - try
-# - except
-# - else
-# - finally
-# - raise
+# - try :contains statements that might generate an exception during execution.
+# - except :handles the exception if it occurs.
+# - else :executed if no exception occurs.
+# - finally :executed regardless of whether an exception occurs or not.
+# - raise :used to throw a custom exception.
+
