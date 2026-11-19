@@ -43,6 +43,11 @@ def divide(a, b):
     if b == 0:
         raise ZeroDivisionError("Cannot divide by zero!")
     return a / b
+try:
+    print(divide(10, 0))
+
+except ZeroDivisionError as e:
+    print(e)
 #or
 
 age = int(input("Enter your age: "))
@@ -51,3 +56,7 @@ if age < 18:
 
 print("You are eligible!")
 
+
+#multiple exception handling is used to handle different types of exceptions that may occur in a try block.
+#  It allows you to specify multiple except blocks, each targeting a specific exception type, enabling more precise error
+#  handling and providing appropriate responses based on the nature of the exception encountered.
