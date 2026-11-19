@@ -19,10 +19,22 @@
 # - finally :executed regardless of whether an exception occurs or not.
 # - raise :used to throw a custom exception.
 
+#if you enter a non-integer value, the program will raise a ValueError exception and print "Invalid input! Please enter numbers only."
 try:
     num = int(input("Enter a number: "))
     print(num)
 
 except ValueError:
     print("Invalid input! Please enter numbers only.")
+
+#else block is executed if no exception occurs in the try block
+try:
+    num = int(input("Enter a number: "))
+
+except ValueError:
+    print("Invalid input!")
+
+else:
+    print("You entered:", num)
+    print("Conversion successful!")
 
