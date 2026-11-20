@@ -27,7 +27,7 @@ try:
 except ValueError:
     print("Invalid input! Please enter numbers only.")
 
-    
+
 
 #else block is executed if no exception occurs in the try block
 try:
@@ -39,6 +39,7 @@ except ValueError:
 else:
     print("You entered:", num)
     print("Conversion successful!")
+    
 
 #raise exception is used to throw a custom exception. It allows you to create your own error messages and handle specific situations in your code.
 def divide(a, b):
