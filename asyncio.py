@@ -50,7 +50,6 @@ asyncio.run(main())   #await main() is used in jupyter notebook instead of async
 
 #using create_task() to run multiple tasks concurrently:
 import asyncio
-
 async def task1():
     print("Downloading file...")
     await asyncio.sleep(3)
