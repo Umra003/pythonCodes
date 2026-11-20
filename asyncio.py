@@ -20,7 +20,7 @@
 # It is used to execute an asynchronous main function.
 
 
-import asyncio
+import asyncio #module
 
 async def task1():
     print("Task 1 started")
