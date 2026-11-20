@@ -27,6 +27,8 @@ try:
 except ValueError:
     print("Invalid input! Please enter numbers only.")
 
+    
+
 #else block is executed if no exception occurs in the try block
 try:
     num = int(input("Enter a number: "))
