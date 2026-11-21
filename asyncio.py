@@ -4,6 +4,7 @@
 # It is mainly used for asynchronous programming.
 
 # Asyncio allows Python to switch between tasks when one task is waiting.
+
 # For example:
 # - Task 1 starts downloading a file.
 # - While waiting for the download, Python works on Task 2.
