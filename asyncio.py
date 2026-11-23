@@ -66,7 +66,7 @@ async def task2():
 async def main():
 
     t1 = asyncio.create_task(task1())
-    t2 = asyncio.create_task(task2())
+    t2 = asyncio.create_task(task2())u
 
     await t1
     await t2
