@@ -114,3 +114,45 @@ except Exception as e:
 
 finally:
     print("\nRegistration process completed!")
+
+
+
+
+#custom exception handling:
+# Step 1: Create custom exception classes
+
+class InsufficientBalanceError(Exception): #exception is a seperate class that inherits from the built-in Exception class. 
+    pass
+
+class InvalidAmountError(Exception):
+    pass
+
+
+# Step 2: Create a function for withdrawal
+
+def withdraw(balance, amount):
+
+    if amount <= 0:
+        raise InvalidAmountError("Amount must be greater than zero")
+
+    if amount > balance:
+        raise InsufficientBalanceError("Insufficient account balance")
+
+    balance = balance - amount
+    print("Withdrawal successful!")
+    print("Remaining balance:", balance)
+
+
+# Step 3: Handle the exceptions
+
+try:
+    balance = 5000
+    amount = int(input("Enter withdrawal amount: "))
+
+    withdraw(balance, amount)
+
+except InvalidAmountError as e:
+    print("Invalid Amount:", e)
+
+except InsufficientBalanceError as e:
+    print("Transaction Failed:", e)
