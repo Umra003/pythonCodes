@@ -46,3 +46,62 @@ with ThreadPoolExecutor(max_workers=3) as executor:
     executor.map(task, [1, 2, 3, 4, 5])
 
 print("All tasks completed")
+
+
+
+
+#proper example of multi threading with arguments:
+import threading
+import time
+
+# Function that accepts arguments
+def process_result(name, marks):
+
+    print(name, "result processing started")
+
+    time.sleep(2)
+
+    print("Student:", name)
+    print("Marks:", marks)
+
+    if marks >= 40:
+        print(name, "has passed")
+    else:
+        print(name, "has failed")
+
+    print("-------------------")
+
+
+# Create threads and pass arguments
+
+t1 = threading.Thread(
+    target=process_result,
+    args=("Umra", 85)
+)
+
+t2 = threading.Thread(
+    target=process_result,
+    args=("Ayesha", 32)
+)
+
+t3 = threading.Thread(
+    target=process_result,
+    args=("Rahul", 72)
+)
+
+
+# Start all threads
+
+t1.start()
+t2.start()
+t3.start()
+
+
+# Wait for all threads to finish
+
+t1.join()
+t2.join()
+t3.join()
+
+print("All results processed!")
+
