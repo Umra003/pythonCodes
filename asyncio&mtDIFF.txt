@@ -1,0 +1,45 @@
+Asyncio and Multithreading both help Python handle multiple tasks without waiting for every task to finish one by one.
+Imagine this situation
+You are at home. You have three tasks:
+1. Washing clothes.
+2. Preparing breakfast.
+3. Cleaning your room.
+You don't want to wait for washing clothes to finish before starting breakfast.
+
+So, how can you manage these tasks?
+2. Multithreading – Taking help from multiple people
+Imagine you have three people at home.
+
+- Person 1 washes clothes.
+- Person 2 prepares breakfast.
+- Person 3 cleans the room.
+All three people work on different tasks at the same time.
+
+This is the basic idea of Multithreading.
+
+In Python:
+- Each person represents a thread.
+- Each thread performs a task.
+- Multiple threads can make progress concurrently.
+
+
+
+Asyncio – One person managing multiple tasks
+Now imagine you are alone.
+You start washing clothes.
+
+While the washing machine is running, you don't need to stand there and wait.
+
+You start preparing breakfast.
+
+While the food is cooking, you start cleaning the room.
+
+Whenever one task is waiting, you move to another task.
+
+This is the basic idea of Asyncio.
+
+In Python:
+- You generally have one thread.
+- An event loop manages different tasks.
+- When one task waits, another task gets a chance to run.
+- await is used to pause a coroutine while it waits.
