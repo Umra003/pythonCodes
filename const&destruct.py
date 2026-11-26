@@ -53,3 +53,30 @@ a2.display()
 
 #note:Python does not support multiple __init__() methods through traditional constructor overloading. 
 # If you define __init__() twice in the same class, the second definition replaces the first. You can use default arguments to achieve similar flexibility.
+
+
+
+
+
+
+
+
+
+# A destructor is a special method that is called when an object is finalized, 
+# usually when it is being destroyed.  [__del__()keyword]
+class Student:
+
+    def __init__(self, name):
+        self.name = name  #del is a Python statement used to delete a reference or remove an item.
+        print(self.name, "object created")
+
+    def __del__(self):
+        print(self.name, "object destroyed")
+
+
+s1 = Student("Umra")
+
+del s1
+
+
+
