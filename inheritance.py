@@ -28,3 +28,24 @@ d = Dog()
 
 d.eat()
 d.bark()
+
+# Multiple Inheritance
+# Definition: When one child class inherits from two or more parent classes, it is called Multiple Inheritance.
+class Father:
+    def skills1(self):
+        print("Father: Driving")
+
+class Mother:
+    def skills2(self):
+        print("Mother: Cooking")
+
+class Child(Father, Mother):
+    def skills3(self):
+        print("Child: Painting")
+
+# Creating object
+c = Child()
+
+c.skills1()
+c.skills2()
+c.skills3()
