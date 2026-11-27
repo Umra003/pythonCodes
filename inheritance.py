@@ -49,3 +49,24 @@ c = Child()
 c.skills1()
 c.skills2()
 c.skills3()
+
+# Multilevel Inheritance
+# Definition: When a class inherits from another child class, forming a chain of inheritance, it is called Multilevel Inheritance.
+class Grandfather:
+    def house(self):
+        print("Grandfather owns a house")
+
+class Father(Grandfather):
+    def car(self):
+        print("Father owns a car")
+
+class Son(Father):
+    def bike(self):
+        print("Son owns a bike")
+
+# Creating object
+s = Son()
+
+s.house()
+s.car()
+s.bike()
