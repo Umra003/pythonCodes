@@ -50,6 +50,49 @@ c.skills1()
 c.skills2()
 c.skills3()
 
+# MRO stands for Method Resolution Order.(multiple inheritance)(order matters)
+# MRO is the order in which Python searches for a method or attribute in a class and its parent classes.
+# Suppose a child class inherits from two parent classes, and both parents have a method with the same name.
+# When we call that method using the child object, which parent's method should Python execute?
+# To decide this, Python follows a specific searching order called MRO.
+class Father:
+    def show(self):
+        print("Father's method")
+
+class Mother:
+    def show(self):
+        print("Mother's method")
+
+class Child(Father, Mother):
+    pass
+
+c = Child()
+c.show() #this will print "Father's method" because Father is listed first in the inheritance list of Child class. If we change the order to class Child(Mother, Father), it will print "Mother's method".
+# using the MRO, we can also check the order in which Python searches for methods in a class hierarchy. We can use the mro() method or the __mro__ attribute to see the MRO of a class.
+# in multiple inheritance, super() means:
+# Go to the next class in the MRO order.
+class A:
+    def show(self):
+        print("A")
+
+class B(A):
+    def show(self):
+        print("B")
+        super().show()
+
+class C(A):
+    def show(self):
+        print("C")
+        super().show()
+
+class D(B, C):#order matters
+    def show(self):
+        print("D")
+        super().show()
+
+d = D()
+d.show()
+
 # Multilevel Inheritance
 # Definition: When a class inherits from another child class, forming a chain of inheritance, it is called Multilevel Inheritance.
 class Grandfather:
