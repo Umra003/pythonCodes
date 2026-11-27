@@ -94,3 +94,30 @@ m.manage()
 
 d.company()
 d.coding()
+
+
+# Hybrid Inheritance
+# Definition: When two or more different types of inheritance are combined in a single program, it is called Hybrid Inheritance.
+class A:
+    def display(self):
+        print("Class A")
+
+class B(A):
+    def show(self):
+        print("Class B")
+
+class C(A):
+    def print_data(self):
+        print("Class C")
+
+class D(B, C):
+    def output(self):
+        print("Class D")
+
+# Creating object
+d = D()
+
+d.display()
+d.show()
+d.print_data()
+d.output()
