@@ -70,3 +70,27 @@ s = Son()
 s.house()
 s.car()
 s.bike()
+
+# Hierarchical Inheritance
+# Definition: When two or more child classes inherit from the same parent class, it is called Hierarchical Inheritance.
+class Employee:
+    def company(self):
+        print("Working in ABC Company")
+
+class Manager(Employee):
+    def manage(self):
+        print("Manager manages the team")
+
+class Developer(Employee):
+    def coding(self):
+        print("Developer writes code")
+
+# Creating objects
+m = Manager()
+d = Developer()
+
+m.company()
+m.manage()
+
+d.company()
+d.coding()
